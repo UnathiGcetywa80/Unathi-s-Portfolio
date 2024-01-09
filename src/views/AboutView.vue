@@ -1,5 +1,8 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h1>About me</h1>
+    <img src="" alt="">
+    <p>unathi gcetywwa teeygvjk</p>
   </div>
 </template>
+
