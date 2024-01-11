@@ -1,65 +1,53 @@
-<!-- <template>
-    <div class="testimonials">
-      <h1>This is an testimonial page</h1>
-    </div>
-  </template>
-   -->
-
-   <template>
-    <div class="testimonials">
-      <h1>This is a testimonial page</h1>
-  
-      <div class="card" v-for="(testimonial, index) in testimonials" :key="index">
-        <div class="card-body">
-          <p class="card-text">{{ testimonial.text }}</p>
-          <p class="card-author"><strong>{{ testimonial.author }}</strong></p>
+<template>
+    <div class="testimonial">
+      <!-- <h1>This is the testimonial page</h1> -->
+      <div class="card-container">
+        <div
+          class="card"
+          v-for="testimonials in $store.state.testimonials"
+          :key="testimonials.name"
+          style="width: 18rem;"
+        >
+          <img src="" class="card-img-top" alt=""/>
+          <div class="card-body">
+            <h5 class="card-title">{{ testimonials.name }}</h5>
+            <p class="card-text">{{ testimonials.description }}</p>
+          </div>
         </div>
       </div>
     </div>
   </template>
-  
   <script>
   export default {
-    data() {
-      return {
-        testimonials: [
-          {
-            text: "I had an amazing experience with this service. The team is highly professional and responsive.",
-
-            author: "Thimna Alam"
-          },
-          {
-            text: "The product exceeded my expectations. I would highly recommend it to others.",
-            author: "Vuyiseka Njovane"
-          },
-          {
-            text: "The product exceeded my expectations. I would highly recommend it to others.",
-            author: "Jane Smith"
-          },
-          {
-            text: "The product exceeded my expectations. I would highly recommend it to others.",
-            author: "Jane Smith"
-          },
-          
-        ]
-      };
+    computed: {
+      fetchTestData() {
+        this.$store.dispatch('fetchTestData');
+      }
+    },
+    mounted() {
+      this.fetchTestData;
     }
   };
   </script>
-  
-  <style scoped>
-  .testimonials {
-    display: table-row-group;
-    flex-wrap: wrap;
+  <style>
+  .card-container {
+    display: flex;
+    /* flex-wrap: wrap;  */
   }
-  
   .card {
-    width: 18rem;
-    margin: 1rem;
+    margin-right: 16px;
+    margin-bottom: 16px;
   }
-  
-  .card-author {
-    margin-top: 1rem;
+  .card img {
+    width: 100%;
+    height: auto;
   }
   </style>
+  
+  
+  
+  
+  
+  
+  
   
