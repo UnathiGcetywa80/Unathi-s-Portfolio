@@ -31,7 +31,7 @@
            </router-link>
          </li>
          <li class="nav-link active">
-           <router-link to="/projects">
+           <router-link to="/project">
              Projects
            </router-link>
          </li>

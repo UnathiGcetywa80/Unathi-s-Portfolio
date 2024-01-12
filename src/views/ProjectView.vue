@@ -1,6 +1,54 @@
 <template>
-    <div class="project">
-      <h1>This is an about page</h1>
-    </div>
+
+    <h1>My Projects</h1>
+      <div class="projects">
+          <div v-for="Project in Projects" :key="Project.id" class="card" style="width: 27rem;">
+              <img :src=" Project.imgURL" class="card-img-top" :alt="Project.name">
+              <div class="card-body">
+                <h5 class="card-title">{{Project.name}}</h5>
+                <a :href="Project.github" target="_blank"  class="btn btn-primary">Source code</a>
+                <a :href="Project.netlify" target="_blank" class="btn btn-primary">Go Live</a>
+              </div>
+            </div>
+      </div>
+  
   </template>
   
+  <script>
+       export default {
+    computed: {
+      Projects() {
+        return this.$store.state.Projects
+      },
+    },
+    mounted() {
+      this.$store.dispatch('fetchProjects');
+    },
+  };
+  </script>
+  
+  <style scoped>
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  </style>

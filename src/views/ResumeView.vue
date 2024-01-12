@@ -1,52 +1,169 @@
 <template>
-    <div class="resume">
-      <h1>Resume</h1>
+  
+    <div class="container">
+    <section class="education">
       <h2>Education</h2>
-      <div class="card-deck">
-        <div v-for="(education, index) in educations" :key="index" class="card mb-3">
-          <div class="card-body">
-            <h5 class="card-title">{{ education.degree }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ education.institution }}</h6>
-            <p class="card-text">{{ education.description }}</p>
-            <p class="card-text"><small class="text-muted">{{ education.date }}</small></p>
+      <div class="timeline">
+        <div v-for="Education in Education" :key="Education.id" class="timeline-item">
+          <div class="timeline-content">
+            <h3>{{ Education.degree }}</h3>
+            <p>{{ Education.institution }}</p>
+            <p>{{ Education.description }}</p>
+            <p>{{ Education.duration }}</p>
           </div>
         </div>
       </div>
-
+    </section>
+  </div>
+    <section class="skills">
       <h2>Skills</h2>
-      <ul class="list-group">
-        <li v-for="(skill, index) in skills" :key="index" class="list-group-item">{{ skill }}</li>
-      </ul>
-    </div>
+      <div class="containerr">
+        <div v-for="Skill in skills" :key="Skill.id" class="card">
+          <img :src="Skill.imgUrl" class="card-img-top" :alt="Skill.name" />
+          <div class="card-body">
+            <h1 class="card-text">{{ Skill.name }}</h1>
+            <h6 class="card-text">{{Skill.description}}</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  
   </template>
   
   <script>
   export default {
-    data() {
-      return {
-        educations: [
-          {
-            degree: 'Grade 12',
-            institution: 'HF Van Cutsem High School',
-            description: 'Commerce',
-            date: '2018 - 2022'
-          },
-          {
-            degree: 'Web Development',
-            institution: 'Life Choices Academy',
-            description: 'Coding',
-            date: '2023 - present'
-          },
-        ],
-        skills: [
-          'JavaScript',
-          'Vue.js',
-          'HTML',
-          'CSS',
-        ]
-      };
-    }
+    computed: {
+      Education() {
+        return this.$store.state.Education;
+      },
+     
+      skills() {
+        return this.$store.state.skills;
+      },
+    },
+    mounted() {
+      this.$store.dispatch("fetchEducation");
+      this.$store.dispatch("fetchSkills");
+    },
   };
   </script>
   
+  <style scoped>
+  .timeline-item {
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+  }
   
+  .timeline-content {
+    width: 600px;
+    margin-left: 40px;
+    padding: 20px;
+  }
+  
+  .timeline-content h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-content p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-item:first-child .timeline-content {
+    margin-top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .timeline-item:last-child .timeline-content {
+    margin-bottom: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .education {
+    margin-bottom: 40px;
+  }
+  
+  .education h2 {
+    color: hsl(0, 0%, 20%);
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .experience h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .skills {
+    margin-bottom: 40px;
+  }
+  
+  .skills h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .containerr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    width: 80%;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:#f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(33.33% - 20px);
+    
+  }
+  
+  .card-img-top {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .card-link {
+    display: flex;
+    margin-left:18rem;
+    margin-right:18rem;
+    justify-content: center;
+    padding: 0.75rem 1.5rem; 
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  
+  </style>
