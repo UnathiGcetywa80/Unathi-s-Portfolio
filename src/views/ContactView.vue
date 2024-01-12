@@ -1,6 +1,6 @@
 <template>
     <div class="contact-form">
-      <h1>Contact Us</h1>
+      <h1>Contact Me</h1>
       <form action="https://formspree.io/f/xjvnkgnq" class="form" method="post">
         <div class="form-group">
           <label for="name">Name:</label>
