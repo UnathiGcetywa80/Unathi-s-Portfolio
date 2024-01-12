@@ -1,18 +1,18 @@
 <template>
     <div class="contact-form">
       <h1>Contact Us</h1>
-      <form @submit.prevent="submitForm" class="form">
+      <form action="https://formspree.io/f/xjvnkgnq" class="form" method="post">
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" v-model="formData.name" required class="form-control">
+          <input type="text" id="name" name="name" v-model="formData.name" required class="form-control">
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" v-model="formData.email" required class="form-control">
+          <input type="email" id="email" name="email" v-model="formData.email" required class="form-control">
         </div>
         <div class="form-group">
           <label for="message">Message:</label>
-          <textarea id="message" v-model="formData.message" required class="form-control"></textarea>
+          <textarea id="message" name="message" v-model="formData.message" required class="form-control"></textarea>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary">Submit</button>
