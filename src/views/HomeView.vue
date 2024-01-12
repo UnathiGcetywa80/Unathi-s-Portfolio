@@ -1,6 +1,6 @@
 <template>
   <div class="home display-2">
-    <p> I am Unathi Gcetywa</p>
+    <p> Hi, I'm Unathi Gcetywa</p>
     <h1 class="container display-1" id="body"></h1>
   </div>
 </template>
