@@ -7,10 +7,10 @@
   }
   *{
     body{
-        background-image: url(https://i.postimg.cc/rmgyLNNJ/bgimg.jpg);
+        background-image: url('https://i.postimg.cc/J0R7zSzR/IMGBCK.jpg');
     }
   }
-  nav {
+  /* nav {
     padding: 30px;
   }
   
@@ -21,7 +21,7 @@
   
   nav a.router-link-exact-active {
     color: #42b983;
-  }
+  } */
 /* .home {
     background-image: url(https://i.postimg.cc/j5nxbZVy/bgrd-img.jpg);
     background-size: cover;
