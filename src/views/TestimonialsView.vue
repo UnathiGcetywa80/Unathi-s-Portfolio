@@ -49,10 +49,16 @@
   
   
   
-  .card-title {
+  .card-title
+   {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
+  .card-title,
+.card-subtitle,
+.card-text {
+  color: #fff; /* White text color */
+}
   
   @media (width < 500px){
     .row{

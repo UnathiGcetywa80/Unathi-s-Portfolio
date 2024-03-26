@@ -1,79 +1,78 @@
 <template>
   <div class="home display-2">
-    <p> Hi, I'm Unathi Gcetywa</p>
-    <h1 class="container display-1" id="body"></h1>
-    <div class="links">
-      <a href="https://www.linkedin.com/mynetwork/" target="_blank">
-        <img src="https://i.postimg.cc/Gm83MFBJ/linked.jpg" alt="LinkedIn" class="social-icon">
-      </a>
-      <a href="https://github.com/UnathiGcetywa80/Unathi-s-Portfolio" target="_blank">
-        <img src="https://i.postimg.cc/x1cGt4yx/github.jpg" alt="GitHub" class="social-icon">
-      </a>
+    <div class="content">
+      <p class="display-2" id="content">{{ welcomeText }}</p>
+      <h1 class="lobster-text" id="body"></h1>
+    </div>
+    <div class="image-container">
+      <img src="https://i.imgur.com/dMsh8Ug.jpg" class="profile-image" alt="Profile Image">
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
-    const textElement = document.getElementById('body');
-    const originalText = "An aspiring web developer";
-    let currentIndex = 0;
-    function typeText() {
-      if (currentIndex < originalText.length) {
-        textElement.textContent += originalText.charAt(currentIndex);
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }
-    const typingInterval = setInterval(typeText, 100);
+  data() {
+    return {
+      welcomeText: "Welcome to my portfolio"
+    };
   },
+  mounted() {
+    // Start retyping the welcome text after a delay
+    setTimeout(() => {
+      this.welcomeText = "";
+      this.typeWelcomeText();
+    }, 2000); // Adjust delay as needed
+  },
+  methods: {
+    typeWelcomeText() {
+      const originalText = "Welcome to my portfolio";
+      let currentIndex = 0;
+      const typingInterval = setInterval(() => {
+        if (currentIndex < originalText.length) {
+          this.welcomeText += originalText.charAt(currentIndex);
+          currentIndex++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 100); // Adjust typing speed as needed
+    }
+  }
 };
 </script>
 
 <style scoped>
-body {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('https://i.postimg.cc/PxfjZCs3/bgrd-img3.jpg');
-  background-size: cover;
-  background-position: center;
+.home {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-emphasis-color: pink;
 }
-.container {
-  font-size: 2em; 
-  font-weight: bold;
-}
-.profile-image {
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Adjust size as needed */
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-.links {
-  margin-top: 20px;
-}
-.links a {
-  margin-right: 10px;
-}
-.social-icon {
-  width: 30px; /* Adjust size as needed */
-  height: 30px; /* Adjust size as needed */
-}
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+
+.content {
+  width: 50%;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  display: none;
+}
+
+#content {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(252, 251, 252); /* Set text color to white */
+}
+
+.image-container {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile-image {
+  width: auto; /* Maintain original width */
+  height: 100%; /* Fill the container height */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgb(253, 35, 166); /* Add border to create the cubed shape effect */
 }
 </style>
