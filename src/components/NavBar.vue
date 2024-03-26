@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <router-link to="/">
-        <img class="navbar-brand" src="https://i.postimg.cc/nL1gr47y/u.png" width="100px" height="100px" alt="logo">
+        <img class="navbar-brand" src="https://i.postimg.cc/nL1gr47y/u.png"  height="50px" alt="logo">
       </router-link>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -52,4 +52,14 @@ export default {
 .navbar-brand {
   margin-right: 20px; /* Adjust margin as needed */
 }
+.navbar{
+  font-family: 'Lobster', cursive;
+}
+.nav-item:hover .nav-link,
+  .nav-item:focus .nav-link,
+  .nav-item:active .nav-link {
+    color: #FFFFFF;
+    background-color: #f82b95;
+    border-radius: 30px;
+  }
 </style>

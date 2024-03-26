@@ -11,7 +11,7 @@
 <script>
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
-import Spinner from './components/Spinner';
+import Spinner from './components/spinner';
 
 
 export default{
