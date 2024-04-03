@@ -7,10 +7,10 @@
             </p>
             <!-- icons -->
             <div class="text-center ">
-        <a href="https://www.linkedin.com/in/unathi-gcetywa-1406062ab/" class="text-dark mx-2"><i class="bi bi-linkedin"></i> Linkedin </a>
-        <a href="https://github.com/UnathiGcetywa80?tab=repositories" class="text-dark mx-2"><i class="bi bi-github"></i> Github </a>
-        <a href="#" class="text-dark mx-2"><i class="bi bi-envelope-at-fill"></i> unathigcetywa80@gmail.com </a>
-        <a href="#" class="text-dark mx-2"><i class="bi bi-phone-fill"></i> 0698612356 </a>
+        <a href="https://www.linkedin.com/in/unathi-gcetywa-1406062ab/" class="text-white mx-2"><i class="bi bi-linkedin"></i> Linkedin </a>
+        <a href="https://github.com/UnathiGcetywa80?tab=repositories" class="text-white mx-2"><i class="bi bi-github"></i> Github </a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-envelope-at-fill"></i> unathigcetywa80@gmail.com </a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-phone-fill"></i> 0698612356 </a>
     </div>
      </div>
        </div>
