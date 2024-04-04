@@ -1,20 +1,22 @@
 <template>
-  
-    <div class="container">
-      <div class="row">
-        <div class="card p-0" v-for="Testimonial in Testimonials" :key="Testimonial.id"  style="width: 20rem;">
-            <img :src="Testimonial.imageURL" class="card-img-top" >
-            <div class="card-body">
-              <h5 class="card-title">{{ Testimonial.name }}</h5>
-              <p class="card-title">{{ Testimonial.subject }}</p>
-              <p class="card-text">{{ Testimonial.description }}</p>
-            </div>
-          </div>
+  <div class="container"><div class="row">
+  <div class="col-4" v-for="Testimonial in Testimonials" :key="Testimonial.id">
+    <div class="card">
+      <div class="card-front">
+        <img :src="Testimonial.imageURL" class="card-img-top" />
+      </div>
+      <div class="card-back">
+        <div class="card-body">
+          <h5 class="card-title">{{ Testimonial.name }}</h5>
+          <p class="card-subtitle">{{ Testimonial.subject }}</p>
+          <p class="card-text">{{ Testimonial.description }}</p>
         </div>
+      </div>
     </div>
-  
-    
-  </template>
+  </div>
+</div>
+</div>
+</template>
   
   <script>
       export default {
@@ -57,7 +59,7 @@
   .card-title,
 .card-subtitle,
 .card-text {
-  color: #fff; /* White text color */
+  color: #0e0d0d; /* White text color */
 }
   
   @media (width < 500px){

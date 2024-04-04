@@ -5,7 +5,7 @@
       <h1 class="lobster-text" id="body"></h1>
     </div>
     <div class="image-container">
-      <img src="https://i.imgur.com/dMsh8Ug.jpg" class="profile-image" alt="Profile Image">
+      <img src="https://i.postimg.cc/KvP4Sm1P/Whats-App-Image-2024-04-03-at-10-58-56.jpg" class="profile-image" alt="Profile Image">
     </div>
   </div>
 </template>
