@@ -21,7 +21,7 @@
           </li>
           <li class="nav-item">
             <router-link to="/resume" class="nav-link">
-              Education & Skills
+              Education & Experience
             </router-link>
           </li>
           <li class="nav-item">

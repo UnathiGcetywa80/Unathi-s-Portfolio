@@ -1,12 +1,14 @@
 <template>
-  <h1>My Projects</h1>
-  <div class="projects">
-    <div v-for="Project in Projects" :key="Project.id" class="card" style="width: 27rem; margin-bottom: 20px;">
-      <img :src="Project.imgURL" class="card-img-top" :alt="Project.name">
-      <div class="card-body">
-        <h5 class="card-title">{{Project.name}}</h5>
-        <a :href="Project.github" target="_blank" class="btn btn-source">Source code</a>
-        <a :href="Project.netlify" target="_blank" class="btn btn-live">Go Live</a>
+  <div>
+    <h1>My Projects</h1>
+    <div class="projects">
+      <div v-for="Project in Projects" :key="Project.id" class="card">
+        <img :src="Project.imgURL" class="card-img-top" :alt="Project.name">
+        <div class="card-body">
+          <h5 class="card-title">{{Project.name}}</h5>
+          <a :href="Project.github" target="_blank" class="btn btn-source">Source code</a>
+          <a :href="Project.netlify" target="_blank" class="btn btn-live">Go Live</a>
+        </div>
       </div>
     </div>
   </div>
@@ -29,11 +31,13 @@ export default {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between; /* Adjust spacing between cards */
 }
 
 .card {
-  margin-right: 20px;
+  width: calc(33.33% - 20px); /* Adjust card width to fit three cards in a row */
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 .card-img-top {
@@ -61,13 +65,13 @@ export default {
 }
 
 .btn-source {
-  background-color: #fb25c9; /* Blue color for Source Code button */
+  background-color: grey; /* Blue color for Source Code button */
   color: #fff; /* White text color */
   margin-right: 10px;
 }
 
 .btn-live {
-  background-color: #f733ac; /* Green color for Go Live button */
+  background-color: grey; /* Green color for Go Live button */
   color: #fff; /* White text color */
 }
 </style>
