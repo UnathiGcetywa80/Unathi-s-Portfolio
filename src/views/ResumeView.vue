@@ -73,9 +73,16 @@ export default {
   width: 80%;
   padding: 20px;
   font-size: 20vh;
-  border: 1px solid #ccc;
+  border: 1px solid #0a0a0a;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(245, 24, 134, 0.942);
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .education {
@@ -83,48 +90,52 @@ export default {
 }
 
 .education h2 {
-  color: white;
+  color: #f7f4f4;
   font-size: 30px;
   margin-bottom: 20px;
   font-weight: bold;
-  font-family: 'Lobster', cursive;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px; /* Adjust the left padding */
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px; /* Adjust the left position */
+  width: 2px;
+  background-color: #0a0a0a; /* Set the timeline color */
 }
 
 .timeline-item {
-  position: relative;
-  padding-bottom: 40px;
-  margin-bottom: 30px;
-}
-
-.timeline-content {
-  width: 600px;
-  margin: 0 0 0 20%;
-  padding: 20px;
-}
-
-.timeline-content h3 {
-  color: #f9f7f7;
-  font-size: 18px;
   margin-bottom: 20px;
 }
 
-.timeline-content p {
-  color: #f5f2f2;
-  font-size: 16px;
+.timeline-content {
+  background-color: white; /* Set the background color */
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+
+}
+
+.timeline-content h3 {
+  color: #333; /* Set the heading color */
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.timeline-item:first-child .timeline-content {
-  margin-top: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.timeline-content p {
+  color: #666; /* Set the paragraph color */
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
-.timeline-item:last-child .timeline-content {
-  margin-bottom: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
+
 
 .skills {
   margin-bottom: 40px;
@@ -179,7 +190,7 @@ export default {
 }
 
 .card-back {
-  color: white; /* Changed background color to transparent */
+  color: rgb(8, 8, 8); /* Changed background color to transparent */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,7 +220,7 @@ export default {
   margin-right: 18rem;
   justify-content: center;
   padding: 0.75rem 1.5rem;
-  color: #ffffff;
+  color: #030303;
   text-decoration: none;
   border-radius: 0.25rem;
 }
