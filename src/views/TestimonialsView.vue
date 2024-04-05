@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="timeline">
+      <h1 class="display-2">References</h1>
       <div v-for="testimonial in testimonials" :key="testimonial.id" class="timeline-item">
         <div class="timeline-content">
           <div class="timeline-header">

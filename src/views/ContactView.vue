@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="contact-form">
-      <h1>Reach Me</h1>
+      <h1 class="display-2">Reach Me</h1>
       <form action="https://formspree.io/f/mleqpqgp" class="form" method="post" @submit.prevent="submitForm">
         <div class="form-group">
           <label for="name">Name:</label>
@@ -25,7 +25,9 @@
       <p><i class="fas fa-user"></i> <b>Name:</b> Unathi Gcetywa</p>
       <p><i class="fas fa-envelope"></i> <b>Email:</b> unathigcetywa80@gmail.com</p>
       <p><i class="fas fa-phone"></i> <b>Phone:</b> 069 861 2356</p>
-      <p><i class="fas fa-map-marker-alt"></i> <b>Address:</b> Bellville South , Cape Town, South Africa</p>
+      <p><i class="fas fa-map-marker-alt"></i> <b>Address:</b> Bellville South, Cape Town, South Africa</p>
+      <p><img src="https://img.icons8.com/material-rounded/24/000000/github.png"/> <b>GitHub:</b> <a href="https://github.com/UnathiGcetywa80">unathigcetywa80</a></p>
+      <p><img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png"/> <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/unathi-gcetywa-1406062ab/">Unathi Gcetywa</a></p>
     </div>
   </div>
 </template>

@@ -30,6 +30,7 @@ export default {
   width: 50%;
   padding: 20px;
   font-family: 'Lobster', cursive;
+  font-size: large
 }
 
 .profile-image {

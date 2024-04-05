@@ -1,6 +1,6 @@
 <template>
   <div class="about-container">
-    <h1>About Me</h1>
+    <h1 class="display-2">About Me</h1>
     <div class="about-content">
       <p>
         Hey there, my name is Unathi Gcetywa, I'm 20 years of age. Born and bred in a small town called De Doorns, and I grew up in a city called George.

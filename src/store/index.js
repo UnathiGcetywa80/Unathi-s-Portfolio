@@ -43,24 +43,24 @@ export default createStore({
         console.error(error)
       }
     },
-    async fetchEducation(context) {
-      try {
-        let EducationResponse = await fetch(dataUrl)
-        let { Education } = await EducationResponse.json()
-        context.commit('setEducation', Education)
-      } catch (error) {
-        console.error(error)
-      }
-    },
-    async fetchSkills(context) {
-      try {
-        let skillsResponse = await fetch(dataUrl)
-        let { Skills } = await skillsResponse.json()
-        context.commit('setSkills', Skills)
-      } catch (error) {
-        console.error(error)
-      }
-    },
+    // async fetchEducation(context) {
+    //   try {
+    //     let EducationResponse = await fetch(dataUrl)
+    //     let { Education } = await EducationResponse.json()
+    //     context.commit('setEducation', Education)
+    //   } catch (error) {
+    //     console.error(error)
+    //   }
+    // },
+    // async fetchSkills(context) {
+    //   try {
+    //     let skillsResponse = await fetch(dataUrl)
+    //     let { Skills } = await skillsResponse.json()
+    //     context.commit('setSkills', Skills)
+    //   } catch (error) {
+    //     console.error(error)
+    //   }
+    // },
   },
   
   modules: {

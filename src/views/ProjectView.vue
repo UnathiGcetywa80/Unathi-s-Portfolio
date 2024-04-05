@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>My Projects</h1>
+    <h1 class="heading display-2">My Projects</h1>
     <div class="projects">
       <div v-for="Project in Projects" :key="Project.id" class="card">
         <img :src="Project.imgURL" class="card-img-top" :alt="Project.name">
@@ -54,6 +54,7 @@ export default {
 .card-title {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  font-family: 'Lobster', cursive;
 }
 
 .btn {
@@ -62,6 +63,7 @@ export default {
   cursor: pointer;
   border-radius: 5px;
   text-decoration: none;
+  font-family: 'Lobster', cursive;
 }
 
 .btn-source {
@@ -73,5 +75,8 @@ export default {
 .btn-live {
   background-color: grey; /* Green color for Go Live button */
   color: #fff; /* White text color */
+}
+.heading{
+  font-family: 'Lobster', cursive;
 }
 </style>
