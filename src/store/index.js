@@ -3,7 +3,6 @@ const dataUrl = "https://unathigcetywa80.github.io/VueData/Data/"
 export default createStore({
   state: {
     Testimonials : null,
-    Experience: null,
     skills : null,
     Education: null,
     Projects: null,
@@ -13,9 +12,6 @@ export default createStore({
   mutations: {
     setTestimonials(state, Testimonials) {
       state.Testimonials = Testimonials
-    },
-    setExperience(state, Experience) {
-      state.Experience = Experience
     },
     setSkills(state, skills) {
       state.skills = skills
@@ -34,15 +30,6 @@ export default createStore({
         let testimonialResponse = await fetch(dataUrl)
         let { Testimonials } = await testimonialResponse.json()
         context.commit('setTestimonials', Testimonials)
-      } catch (error) {
-        console.error(error)
-      }
-    },
-    async fetchExperience(context) {
-      try {
-        let experienceResponse = await fetch(dataUrl)
-        let { Experience } = await experienceResponse.json()
-        context.commit('setExperience', Experience)
       } catch (error) {
         console.error(error)
       }

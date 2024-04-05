@@ -1,5 +1,5 @@
-<template>
-  <div class="container-fluid fixed-bottom bg-dark text-white py-3">
+<!-- <template>
+  <div class="container-fluid fixed-bottom bg-dark text-white py-3 vh">
     <div class="row justify-content-center align-items-center">
       <p class="lead mb-0">
         Unathi's Portfolio &copy; <span>{{ currYear }}</span>
@@ -64,4 +64,49 @@ export default {
 .text-white a:hover {
   text-decoration: underline; /* Add underline on hover */
 }
-</style>
+</style> --> 
+<template>
+  <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="lead">
+              Unathi Gcetywa's Portfolio ©
+              <span>{{ currYear }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+  </template>
+  <script>
+  export default{
+    name: "footerComp",
+    data(){
+      return{
+        currYear: new Date().getFullYear()
+      }
+    }
+  }
+  </script>
+  <style scoped>
+  .container-fluid {
+      position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+    }
+  </style>
+  
+  
+  
+  
+  
+  
+  
+  
+
+

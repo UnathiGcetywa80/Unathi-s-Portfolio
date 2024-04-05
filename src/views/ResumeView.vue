@@ -5,35 +5,25 @@
       <section class="education">
         <h2>Education</h2>
         <div class="timeline">
-          <div v-for="Education in education" :key="Education.id" class="timeline-item">
+          <div v-for="(Education, index) in education" :key="Education.id" class="timeline-item" :class="{ 'timeline-item-left': index % 2 === 0, 'timeline-item-right': index % 2 !== 0 }">
             <div class="timeline-content">
-              <h3>{{ Education.degree }}</h3>
-              <p>{{ Education.institution }}</p>
-              <p>{{ Education.description }}</p>
-              <p>{{ Education.duration }}</p>
+              <div class="content-left">
+                <h3>{{ Education.degree }}</h3>
+                <p>{{ Education.institution }}</p>
+                <p>{{ Education.duration }}</p>
+              </div>
+              <div class="content-right">
+                <p>{{ Education.description }}</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </div>
 
-    <!-- Experience Section -->
-    <section class="experience">
-      <h2>Experience</h2>
-      <div class="experience-list">
-        <div v-for="experience in experiences" :key="experience.id" class="experience-item">
-          <div class="experience-details">
-            <h2>{{ Experience.place }}</h2>
-              <p>{{ Experience.duration }}</p>
-              <p>{{ Experience.profession }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Skills Section -->
     <section class="skills">
-      <h2 class="display-1" id="heading">Skills</h2>
+      <h2 id="heading">Skills</h2>
       <div class="container">
         <div v-for="Skill in skills" :key="Skill.id" class="card">
           <div class="card-inner">
@@ -57,16 +47,12 @@ export default {
     education() {
       return this.$store.state.Education;
     },
-    experiences() {
-      return this.$store.state.Experiences;
-    },
     skills() {
       return this.$store.state.Skills;
     },
   },
   mounted() {
     this.$store.dispatch("fetchEducation");
-    this.$store.dispatch("fetchExperiences");
     this.$store.dispatch("fetchSkills");
   },
 };
@@ -75,40 +61,54 @@ export default {
 <style scoped>
 /* Your existing styles */
 
-.experience {
-  margin-top: 40px;
+.education-box {
+  margin-top: 40px; /* Add margin for separation from the top */
 }
 
-.experience h2 {
+.education h2 {
   color: #f7f4f4;
   font-size: 30px;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.experience-list {
+.timeline {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.experience-item {
-  margin: 20px;
-  text-align: center;
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.experience-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+.timeline-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: 'Lobster', cursive;
 }
 
-.experience-name {
-  margin-top: 10px;
-  font-weight: bold;
+.content-left,
+.content-right {
+  flex-basis: 50%;
 }
 
-.experience-description {
-  margin-top: 10px;
+.timeline-item-left .content-left {
+  order: 2; /* Change the order for left items */
+}
+
+.timeline-item-right .content-right {
+  order: 1; /* Change the order for right items */
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #d6d3d3;
 }
 </style>

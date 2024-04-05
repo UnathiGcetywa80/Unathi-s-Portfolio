@@ -61,7 +61,7 @@ export default {
 }
 
 .image-container {
-  width: 50%;
+  width: 75%;
   height: 80vh;
   display: flex;
   justify-content: flex-end;
@@ -73,6 +73,6 @@ export default {
   height: 100%; /* Fill the container height */
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid rgb(253, 35, 166); /* Add border to create the cubed shape effect */
+  border: 5px solid rgb(63, 63, 63); /* Add border to create the cubed shape effect */
 }
 </style>
