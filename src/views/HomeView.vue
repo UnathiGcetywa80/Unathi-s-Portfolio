@@ -1,43 +1,21 @@
 <template>
-  <div class="home display-2">
+  <div class="home">
     <div class="content">
-      <p class="display-2" id="content">{{ welcomeText }}</p>
-      <h1 class="lobster-text" id="body"></h1>
+      <h1 class="lobster-text display-1">Hey, Welcome to my portfolio</h1>
+      <p>I am a passionate web developer with expertise in HTML, CSS, JavaScript, and various frameworks such as Vue.js. I specialize in creating user-friendly, responsive web applications that meet the client's needs and exceed expectations.</p>
+      <p>DOB: [19-01-2004]</p>
+      <p>Location: [Bellville South, Cape Town, South Africa]</p>
+      <p>Profession: Web Developer</p>
     </div>
     <div class="image-container">
-      <img src="https://i.postimg.cc/KvP4Sm1P/Whats-App-Image-2024-04-03-at-10-58-56.jpg" class="profile-image" alt="Profile Image">
+      <img src="https://i.postimg.cc/ryYs0J7Y/IMG-5869.jpg" class="profile-image" alt="Profile Image">
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      welcomeText: "Welcome to my portfolio"
-    };
-  },
-  mounted() {
-    // Start retyping the welcome text after a delay
-    setTimeout(() => {
-      this.welcomeText = "";
-      this.typeWelcomeText();
-    }, 2000); // Adjust delay as needed
-  },
-  methods: {
-    typeWelcomeText() {
-      const originalText = "Welcome to my portfolio";
-      let currentIndex = 0;
-      const typingInterval = setInterval(() => {
-        if (currentIndex < originalText.length) {
-          this.welcomeText += originalText.charAt(currentIndex);
-          currentIndex++;
-        } else {
-          clearInterval(typingInterval);
-        }
-      }, 100); // Adjust typing speed as needed
-    }
-  }
+  // Your script goes here
 };
 </script>
 
@@ -51,28 +29,13 @@ export default {
 .content {
   width: 50%;
   padding: 20px;
-}
-
-#content {
   font-family: 'Lobster', cursive;
-  font-size: 2em;
-  font-weight: bold;
-  color: rgb(252, 251, 252); /* Set text color to white */
-}
-
-.image-container {
-  width: 75%;
-  height: 80vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .profile-image {
-  width: auto; /* Maintain original width */
-  height: 100%; /* Fill the container height */
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid rgb(63, 63, 63); /* Add border to create the cubed shape effect */
+  max-width: 450px; /* Adjust the max-width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 100%;
+  border: 5px solid rgb(63, 63, 63);
 }
 </style>

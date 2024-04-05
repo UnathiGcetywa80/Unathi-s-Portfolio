@@ -9,6 +9,7 @@
         I studied and did my grade 12 at HF Van Cutsem Combined School, where I was doing Commercial subjects.
       </p>
       <p>Since 2020, I have had an interest in computers, and I registered at Life Choices Academy to learn Web Development. I am dedicated to learning and improving my skills every day.</p>
+      <p>I'm a passionate and dedicated web developer with a keen eye for detail and a love for clean, efficient code.I've worked on a range of projects, from simple static websites to complex web applications. My goal is to create engaging and user-friendly experiences that make a positive impact.</p>
       <div class="languages-box">
         <p><b class="lsng">Languages:</b></p>
         <ul>
@@ -19,7 +20,7 @@
       </div>
     </div>
     <section>
-      <a href="https://drive.google.com/file/d/1eiaud0CWz-UiJxpcM5bkQVZWINARCsTA/view?usp=sharing" class="card-link download-cv-btn">Download CV</a>
+      <a href="https://drive.google.com/file/d/1eiaud0CWz-UiJxpcM5bkQVZWINARCsTA/view?usp=sharing" class="card-link download-cv-btn">View Resume</a>
     </section>
   </div>
 </template>
@@ -56,8 +57,8 @@
 }
   .languages-box {
     border: 1px solid #969595;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 5px;
+    margin-top: 10px;
   }
 
   .card-link {
