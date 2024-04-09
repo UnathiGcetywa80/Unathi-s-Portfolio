@@ -2,7 +2,7 @@
   <div class="container">
     <!-- Education Section -->
     <div class="section-box">
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title" id="display">Education</h2>
       <section class="education">
         <div class="timeline">
           <div v-for="(educationItem, index) in Education" :key="index" class="timeline-item" :class="{ 'timeline-item-left': index % 2 === 0, 'timeline-item-right': index % 2 !== 0 }">
@@ -38,33 +38,42 @@
         </div>
       </section>
     </div>
-    <h4 class="display-4 text-white" id="sub-heading">Skills</h4>
-          <div class="row d-block d-md-flex justify-content-center align-content-end">
-      <div class="col">
-     <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="https://i.postimg.cc/sxTNXbvK/msql.jpg" alt="HTML" style="width:300px;height:300px;">
-        </div>
-        <div class="flip-card-back">
-          <img src="https://i.postimg.cc/9MfKyWZZ/html.jpg" alt="CSS" style="width:300px;height:300px;">
-        </div>
-      </div>
+    
+          
+      <!-- Skills Section -->
+<div class="section-box">
+  <h2 class="section-title" id="skills">Skills</h2>
+  <div class="row">
+    <!-- Technical Skills -->
+    <div class="col-6">
+      <h3 class="sub-heading">Technical Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+        <li>Node.js</li>
+        <li>Vue.js</li>
+        <li>Mysql</li>
+        
+      </ul>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="col-6">
+      <h3 class="sub-heading">Soft Skills</h3>
+      <ul>
+        <li>Communication</li>
+        <li>Teamwork</li>
+        <li>Problem-solving</li>
+        <li>Microsoft word</li>
+        <li>Microsoft excel</li>
+        <li>Microsoft word</li>
+      </ul>
     </div>
   </div>
-  <div class="col">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img src="https://i.postimg.cc/vZfsmHtm/boot.jpg" alt="BOOTSTRAP" style="width:300px;height:300px;">
-        </div>
-        <div class="flip-card-back">
-          <img src="https://i.postimg.cc/YCWpmxMM/css.webp" alt="JS" style="width:300px;height:300px;">
-         </div>
-        </div>
-    </div>
-    </div>
-     </div>
+</div>
+
   </div>
   </template>
 
@@ -137,24 +146,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 
-
-
-.section-box {
-  width: 80%;
-  margin-bottom: 50px;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for a card effect */
-  padding: 20px;
-  box-align: center;
-}
 
 .section-title {
-  margin-bottom: 20px;
-  color: #333; /* Darker text color */
-}
-.section-title{
   color: white;
   font-family: 'Lobster', cursive;
 }
@@ -163,10 +158,12 @@ export default {
   display: flex;
   flex-direction: column;
 }
-#sub-heading{
+
+#sub-heading {
   font-size: 40px;
   font-family: 'Lobster', cursive;
 }
+
 .timeline-item {
   display: flex;
   width: 100%;
@@ -177,140 +174,21 @@ export default {
 .timeline-content {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%; /* Adjusted width to take full width */
   font-family: 'Lobster', cursive;
- margin-left: 27%;
+  margin: 0 auto; /* Centers the content horizontally */
 }
 
+#display{
+  font-size:xx-large;
+}
 .timeline-content h3 {
   margin-bottom: 10px;
 }
 
-.card-container {
+/* .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-.sub-heading{
-  color: white;
-}
-
-.card {
-  width: 200px;
-  margin-bottom: 20px;
-  background-color: #000; /* Change background color to black */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Shadow for a card effect */
-  overflow: hidden; /* Hide overflowing content */
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.card-front {
-  color: #080808; /* White text color */
-  background-color: transparent; /* Transparent background */
-}
-
-.card-back {
-  color: #333; /* Darker text color */
-  background-color: #070606; /* Light gray background color */
-  transform: rotateY(180deg);
-}
-
-.card-img-top {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-}
-
-.card-text {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Lobster', cursive;
-}
-
-.card-back p {
-  padding: 20px;
-  font-size: 16px;
-}
-
-.education,
-.experience {
-  background-color: #333; /* Dark background color */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px;
-  color: #fff; /* Light text color */
-  margin-top: 20px;
-}
-
-#experience {
-  margin-top: 30px;
-}
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-    padding-left: 200px;
-    margin-top: 40px;
-    margin-bottom: 200px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  .flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
-  }
-.sub-heading{
-  color: #fff;
-  font-family: 'Lobster', cursive;
-}
+  justify-content;
+{ */
 </style>
