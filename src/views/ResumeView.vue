@@ -151,7 +151,7 @@ export default {
 
 .section-title {
   color: white;
-  font-family: 'Lobster', cursive;
+  font-family: Gelasio;
 }
 
 .timeline {
@@ -161,7 +161,7 @@ export default {
 
 #sub-heading {
   font-size: 40px;
-  font-family: 'Lobster', cursive;
+  font-family: Gelasio;
 }
 
 .timeline-item {
@@ -175,7 +175,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%; /* Adjusted width to take full width */
-  font-family: 'Lobster', cursive;
+  font-family: Gelasio;
   margin: 0 auto; /* Centers the content horizontally */
 }
 

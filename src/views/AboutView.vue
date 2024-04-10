@@ -45,12 +45,12 @@
   h1 {
     font-size: 30px;
     color: #f7f8f8;
-    font-family: 'Lobster', cursive;
+    font-family: Gelasio;
   }
 
   .about-content p {
     line-height: 1.6;
-    font-family: 'Lobster', cursive;
+    font-family: Gelasio;
   }
 .lsng{
   font-size: 30px;

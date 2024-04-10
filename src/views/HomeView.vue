@@ -6,6 +6,7 @@
       <p>DOB: [19-01-2004]</p>
       <p>Location: [Bellville South, Cape Town, South Africa]</p>
       <p>Profession: Web Developer</p>
+      <router-link to="/about" class="btn btn-primary">Read More</router-link>
     </div>
     <div class="image-container">
       <img src="https://i.postimg.cc/ryYs0J7Y/IMG-5869.jpg" class="profile-image" alt="Profile Image">
@@ -30,7 +31,7 @@ export default {
   width: 50%;
   padding: 20px;
   font-family: 'Lobster', cursive;
-  font-size: large
+  font-size: 
 }
 
 .profile-image {
