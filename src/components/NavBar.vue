@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffdde1;">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand">
         <img src="https://i.postimg.cc/nL1gr47y/u.png" height="50px" alt="logo">
@@ -11,7 +11,7 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link to="/" class="nav-link" exact>
-              Home
+           Home
             </router-link>
           </li>
           <li class="nav-item">
@@ -52,7 +52,15 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
+/* .navbar {
   font-family: 'Lobster', cursive;
+} */
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #a30050; /* Dark pink hover color */
 }
 </style>

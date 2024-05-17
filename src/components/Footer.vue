@@ -28,12 +28,9 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: pink; /* Add pink background color */
+  color: black; /* Set text color to black */
   text-align: center;
-  font-family: 'Lobster', cursive;
+  /* font-family: 'Lobster', cursive; */
 }
-
-
-
 </style>

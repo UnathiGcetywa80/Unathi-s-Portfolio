@@ -8,12 +8,12 @@
           <div v-for="(educationItem, index) in Education" :key="index" class="timeline-item" :class="{ 'timeline-item-left': index % 2 === 0, 'timeline-item-right': index % 2 !== 0 }">
             <div class="timeline-content">
               <div class="content-left">
-                <h3>{{ educationItem.degree }}</h3>
-                <p>{{ educationItem.institution }}</p>
-                <p>{{ educationItem.duration }}</p>
+                <h3 class="content-text">{{ educationItem.degree }}</h3>
+                <p class="content-text">{{ educationItem.institution }}</p>
+                <p class="content-text">{{ educationItem.duration }}</p>
               </div>
               <div class="content-right">
-                <p>{{ educationItem.description }}</p>
+                <p class="content-text">{{ educationItem.description }}</p>
               </div>
             </div>
           </div>
@@ -29,9 +29,9 @@
           <div v-for="(experienceItem, index) in Experience" :key="index" class="timeline-item" :class="{ 'timeline-item-left': index % 2 === 0, 'timeline-item-right': index % 2 !== 0 }">
             <div class="timeline-content">
               <div class="content-left">
-                <h3>{{ experienceItem.place }}</h3>
-                <p>{{ experienceItem.duration }}</p>
-                <p>{{ experienceItem.profession }}</p>
+                <h3 class="content-text">{{ experienceItem.place }}</h3>
+                <p class="content-text">{{ experienceItem.duration }}</p>
+                <p class="content-text">{{ experienceItem.profession }}</p>
               </div>
             </div>
           </div>
@@ -48,13 +48,13 @@
     <div class="col-6">
       <h3 class="sub-heading">Technical Skills</h3>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Bootstrap</li>
-        <li>Node.js</li>
-        <li>Vue.js</li>
-        <li>Mysql</li>
+        <li class="content-text">HTML</li>
+        <li class="content-text">CSS</li>
+        <li class="content-text">JavaScript</li>
+        <li class="content-text">Bootstrap</li>
+        <li class="content-text">Node.js</li>
+        <li class="content-text">Vue.js</li>
+        <li class="content-text">Mysql</li>
         
       </ul>
     </div>
@@ -63,19 +63,19 @@
     <div class="col-6">
       <h3 class="sub-heading">Soft Skills</h3>
       <ul>
-        <li>Communication</li>
-        <li>Teamwork</li>
-        <li>Problem-solving</li>
-        <li>Microsoft word</li>
-        <li>Microsoft excel</li>
-        <li>Microsoft word</li>
+        <li class="content-text">Communication</li>
+        <li class="content-text">Teamwork</li>
+        <li class="content-text">Problem-solving</li>
+        <li class="content-text">Microsoft word</li>
+        <li class="content-text">Microsoft excel</li>
+        <li class="content-text">Microsoft word</li>
       </ul>
     </div>
   </div>
 </div>
 
   </div>
-  </template>
+</template>
 
 <script>
 export default {
@@ -147,10 +147,16 @@ export default {
 </script>
 
 <style>
+/* .container {
+  background-color: #ffd4f3; 
+}
 
+.section-box {
+  background-color: #ffd4f3; 
+} */
 
-.section-title {
-  color: white;
+.section-title, .content-text {
+  color: black; /* Set text color to black */
   font-family: Gelasio;
 }
 
@@ -179,16 +185,11 @@ export default {
   margin: 0 auto; /* Centers the content horizontally */
 }
 
-#display{
-  font-size:xx-large;
+#display {
+  font-size: xx-large;
 }
+
 .timeline-content h3 {
   margin-bottom: 10px;
 }
-
-/* .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content;
-{ */
 </style>

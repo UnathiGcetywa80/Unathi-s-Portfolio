@@ -61,12 +61,12 @@ export default {
 .contact-form {
   width: 50%;
   margin-right: 20px;
-  font-family: 'Lobster', cursive;
+  /* font-family: 'Lobster', cursive; */
 }
 
 .personal-details {
   width: 50%;
-  font-family: 'Lobster', cursive;
+  /* font-family: 'Lobster', cursive; */
 }
 
 .personal-details h2 {
@@ -96,4 +96,16 @@ export default {
 .btn-primary:hover {
   background-color: grey;
 }
+.contact-form {
+  width: 50%;
+  margin-right: 20px;
+  /* font-family: 'Lobster', cursive; */
+  color: #000; /* Set text color to black */
+}
+.personal-details {
+  width: 50%;
+  /* font-family: 'Lobster', cursive; */
+  color: #000; /* Set text color to black */
+}
+
 </style>

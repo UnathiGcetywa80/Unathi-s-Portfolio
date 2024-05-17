@@ -32,54 +32,30 @@ export default {
 </script>
 
 <style>
-/* Testimonials.css */
-
-.timeline {
-  position: relative;
-  margin-top: 20px;
-}
-
-.timeline-item {
-  display: flex;
-  padding: 20px 0;
-}
-
-.timeline-content {
-  display: flex;
-  width: 100%;
-}
-
-.timeline-header {
-  flex: 0 0 auto;
-  margin-right: 20px;
-}
-
-.timeline-image {
-  width: 100px; /* Adjust the width of the image */
-  height: auto;
-  border-radius: 50%;
-}
-
-.timeline-body {
-  flex: 1 1 auto;
+.timeline-subtitle,
+.timeline-text,
+.timeline-title {
+  color: #000; /* Set text color to black */
+  /* font-family: 'Lobster', cursive; */
 }
 
 .timeline-title {
   font-size: x-large;
   margin-bottom: 0.5rem;
-  font-family: 'Lobster', cursive;
 }
 
 .timeline-subtitle,
 .timeline-text {
-  color: #eceaea; /* Black text color */
-  font-family: 'Lobster', cursive;
   font-size: large;
 }
+.timeline-image {
+  width: 100px; /* Set the width of the image */
+  height: 100px; /* Set the height of the image */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+.display-2{
+  color: #000;
 
-@media (max-width: 500px) {
-  .timeline-image {
-    width: 50px; /* Adjust the width of the image for smaller screens */
-  }
 }
 </style>
